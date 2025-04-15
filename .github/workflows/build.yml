@@ -64,7 +64,7 @@ jobs:
         uses: johnwason/vcpkg-action@v5
         id: vcpkg
         with:
-          manifest-dir: ${{ github.workspace }} # Set to directory containing vcpkg.json
+          manifest-dir: ${{ github.workspace }}/data_structure # Set to directory containing vcpkg.json
           triplet: ${{ matrix.triplet }}
           token: ${{ github.token }}
 
@@ -79,7 +79,7 @@ jobs:
           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
           -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
           -DVCPKG_TARGET_TRIPLET=${{ matrix.triplet }}
-          -S ${{ github.workspace }}
+          -S ${{ github.workspace }}/data_structure
 
       # build
       - name: Build
