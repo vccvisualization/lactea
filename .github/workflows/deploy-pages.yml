@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'web_visualizer/**'  # Only run when web/ changes
+  workflow_dispatch:
 
 jobs:
   deploy:
