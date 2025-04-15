@@ -2,6 +2,7 @@
   "name": "lactea",
   "version-string": "0.1.0",
   "dependencies": [
+    "tbb",
     "glfw3",
     "glew",
     "glm",
