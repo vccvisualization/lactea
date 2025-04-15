@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lactea</title>
+    <script src="res/lib/gl-matrix-min.js"></script>
+    <link href="res/lib/lil-gui.min.css">
+    <script type="module" src="res/lib/lil-gui.umd.min.js"></script>
+    <script src="res/lib/d3.v7.min.js"></script>
+    <script src="res/lib/chart.umd.js"></script>
+    <script src="res/lib/hammerjs@2.0.8"></script>
+    <script src="res/lib/chartjs-plugin-zoom.min.js"></script>
+
+    <link rel="stylesheet" href="res/styles/style.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <section id="lactea-container">
+            <div>
+                <canvas id="lactea-canvas" width="200" height="100"></canvas>
+            </div>
+            <section id="info-container">
+                <div id="query"></div>
+                <div id="info"></div>
+            </section>
+            <div id="figures">
+                <div class="spectrum">
+                    <canvas id="spectrum" width="500" height="300"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="help-container">
+            <button id="help_button">Help</button>
+            <div id="help" class="hide">
+                <p>
+                    Lactea is an open-source, web-based implementation of a submitted paper to the EuroVis 2025 conference introducing a spectral visualization, multi-resolution technique for a large star catalog. This repository works with the European Space Agency (ESA)'s GAIA catalog, which contains the spectral information of almost 2 billion stars. To use:
+                </p>
+                <p>To cite the paper:</p>
+                <blockquote>
+                    @article{alghamdi2025Lactea,
+                        title = {Lactea: Web-Based Spectrum-Preserving Multi-Resolution Visualization of the GAIA Star Catalog},
+                        author = {Alghamdi, Reem and Hadwiger, Markus and Reina, Guido and Jaspe-Villanueva, Alberto},
+                        journal = {Computer Graphics Forum (Proceedings of Eurographics Conference on Visualization 2025)},
+                        year = {2025},
+                        volume = {44},
+                        number = {3},
+                        pages = {to appear}
+                      } 
+                </blockquote>
+                <p><a href="https://github.com/vccvisualization/lactea" class="link">GitHub Repository</a></p>
+                <table>
+                    <tr>
+                        <th>Key/Button</th>
+                        <th>Functionaliy</th>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>Show/hide main GUI</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>Show/hide minimap</td>
+                    </tr>
+                    <tr>
+                        <td>N</td>
+                        <td>Show/hide node layout</td>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>Show/hide information</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>Show/hide spectrum of the selected point(s)</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>Show/hide colormap</td>
+                    </tr>
+                    <tr>
+                        <td>O</td>
+                        <td>overlay spectrum, colormap, information over visualization</td>
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>change projection strategy</td>
+                    </tr>
+                    <tr>
+                        <td>Space</td>
+                        <td>Change settings to replicate paper figures</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Lactea</th>
+                    </tr>
+                    <tr>
+                        <td>Drag</td>
+                        <td>Move around</td>
+                    </tr>
+                    <tr>
+                        <td>Scroll</td>
+                        <td>Zoom in/out</td>
+                    </tr>
+                    <tr>
+                        <td>Right Click</td>
+                        <td>Select point to view its spectrum</td>
+                    </tr>
+                    <tr>
+                        <td>Shift + Drag</td>
+                        <td>Select area to view spectra</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Spectrum</th>
+                    </tr>
+                    <tr>
+                        <td>Hover</td>
+                        <td>Show information</td>
+                    </tr>
+                    <tr>
+                        <td>Shift + Drag</td>
+                        <td>Zoom into area</td>
+                    </tr>
+                    <tr>
+                        <td>Right Click</td>
+                        <td>Reset Zoom</td>
+                    </tr>
+                    <tr>
+                        <td>Alt + Drag</td>
+                        <td>Move Spectrum around</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Colormap</th>
+                    </tr>
+                    <tr>
+                        <td>Double Click</td>
+                        <td>Add new color</td>
+                    </tr>
+                    <tr>
+                        <td>Click</td>
+                        <td>Change selected point color (from main GUI)</td>
+                    </tr>
+                    <tr>
+                        <td>Drag</td>
+                        <td>Change position</td>
+                    </tr>
+                    <tr>
+                        <td>Right Click</td>
+                        <td>Delete Point</td>
+                    </tr>
+                    <tr>
+                        <td>Hover</td>
+                        <td>Show information</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div id="maingui" class="hide"></div>
+
+    <script src="src/main.js" type="module"></script>
+</body>
+
+</html>
