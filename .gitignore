@@ -1,0 +1,5 @@
+data_structure/.idea
+data_structure/bin
+data_structure/cmake-build-debug
+script/venv
+web_visualizer/res/styles/style.css.map

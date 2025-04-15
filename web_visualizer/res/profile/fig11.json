@@ -1,0 +1,135 @@
+{
+    "general": {
+        "infoWidth": 500,
+        "deltaTime": 0,
+        "performance": false,
+        "starTaskSize": 50000,
+        "nodeTaskSize": 1000,
+        "taskDepthStages": 16,
+        "showMinimap": false,
+        "showNodeLayout": false,
+        "showTwoScreens": false,
+        "selectionColor": {
+            "r": 0,
+            "g": 1,
+            "b": 0.06666666666666667
+        },
+        "showSelection": true,
+        "showPatches": true,
+        "showStars": true
+    },
+    "camera": {
+        "proj": 3,
+        "offset": [
+            0.011606850661337376,
+            0.05208967626094818
+        ],
+        "cursorPos": [
+            0.38618379831314087,
+            0.25757575035095215
+        ],
+        "cursorPos2": [
+            0.6459254622459412,
+            0.6595505475997925
+        ],
+        "areaSelector": false,
+        "camLeft": [
+            -0.9973419308662415,
+            0,
+            0.07286336272954941
+        ],
+        "camUp": [
+            -0.07188991457223892,
+            -0.16291514039039612,
+            -0.984017550945282
+        ],
+        "camFwd": [
+            0.011870544403791428,
+            -0.9866400957107544,
+            0.1624820977449417
+        ],
+        "fov": 1.2666901579273904,
+        "aspect": 1.7777777777777777,
+        "nearClip": 0.01,
+        "farClip": 100,
+        "zoom": 0.48225308641975856
+    },
+    "cache": {
+        "cachePreload": 5,
+        "deltaLoop": 20,
+        "maxLoadingReq": 50,
+        "interface": {
+            "areaThreshold": 0.9,
+            "levels": 16,
+            "totalLevels": 16,
+            "maxLength": 1000,
+            "patchesCutOff": true,
+            "energyTol": 0.8
+        }
+    },
+    "renderPipeline": {
+        "colormapStrategy": 11,
+        "normalizationStrategy": 1,
+        "tonemappingStrategy": 2,
+        "extinction": false,
+        "gaussianKernelSize": 3,
+        "gaussianSigma": 1,
+        "narrowBandSigma": 1,
+        "minPercentile": 0.1,
+        "maxPercentile": 0.9,
+        "gammaCorrection": 5,
+        "isClip": true,
+        "subtractContinuum": false,
+        "continuumSigma": 10,
+        "continuumKernelSize": 10,
+        "patchLevel": 0
+    },
+    "colormap": {
+        "colorMap": [
+            [
+                0,
+                "#000000"
+            ],
+            [
+                34,
+                "#330000"
+            ],
+            [
+                68,
+                "#660000"
+            ],
+            [
+                102,
+                "#991a00"
+            ],
+            [
+                136,
+                "#cc4d00"
+            ],
+            [
+                171,
+                "#ff8000"
+            ],
+            [
+                205,
+                "#ffb333"
+            ],
+            [
+                239,
+                "#ffe666"
+            ],
+            [
+                273,
+                "#ffff99"
+            ],
+            [
+                307,
+                "#ffffcc"
+            ],
+            [
+                342,
+                "#ffffff"
+            ]
+        ]
+    }
+}

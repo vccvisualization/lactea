@@ -1,0 +1,135 @@
+{
+    "general": {
+        "infoWidth": 500,
+        "deltaTime": 0,
+        "performance": false,
+        "starTaskSize": 50000,
+        "nodeTaskSize": 1000,
+        "taskDepthStages": 16,
+        "showMinimap": true,
+        "showNodeLayout": true,
+        "showTwoScreens": false,
+        "selectionColor": {
+            "r": 0.45098039215686275,
+            "g": 1,
+            "b": 0
+        },
+        "showSelection": true,
+        "showPatches": true,
+        "showStars": true
+    },
+    "camera": {
+        "proj": 1,
+        "offset": [
+            0.5,
+            0.5
+        ],
+        "cursorPos": [
+            0.43963414430618286,
+            0.5737527012825012
+        ],
+        "cursorPos2": [
+            0.5646341443061829,
+            0.4208242893218994
+        ],
+        "areaSelector": true,
+        "camLeft": [
+            1,
+            0,
+            0
+        ],
+        "camUp": [
+            0,
+            -1,
+            1.2246468525851679e-16
+        ],
+        "camFwd": [
+            0,
+            -1.2246468525851679e-16,
+            -1
+        ],
+        "fov": 0.6108652381980153,
+        "aspect": 1.7777777777777777,
+        "nearClip": 0.01,
+        "farClip": 100,
+        "zoom": 1
+    },
+    "cache": {
+        "cachePreload": 5,
+        "deltaLoop": 20,
+        "maxLoadingReq": 50,
+        "interface": {
+            "areaThreshold": 1,
+            "levels": 24,
+            "totalLevels": 16,
+            "maxLength": 1000,
+            "patchesCutOff": true,
+            "energyTol": 1
+        }
+    },
+    "renderPipeline": {
+        "colormapStrategy": 0,
+        "normalizationStrategy": 2,
+        "tonemappingStrategy": 0,
+        "extinction": false,
+        "gaussianKernelSize": 1,
+        "gaussianSigma": 1,
+        "narrowBandSigma": 1,
+        "minPercentile": 0,
+        "maxPercentile": 0.98,
+        "gammaCorrection": 2,
+        "isClip": true,
+        "subtractContinuum": true,
+        "continuumSigma": 10,
+        "continuumKernelSize": 10,
+        "patchLevel": 0
+    },
+    "colormap": {
+        "colorMap": [
+            [
+                0,
+                "#000004"
+            ],
+            [
+                34,
+                "#140e36"
+            ],
+            [
+                68,
+                "#3b0f70"
+            ],
+            [
+                102,
+                "#641a80"
+            ],
+            [
+                136,
+                "#8c2981"
+            ],
+            [
+                171,
+                "#b73779"
+            ],
+            [
+                205,
+                "#de4968"
+            ],
+            [
+                239,
+                "#f7705c"
+            ],
+            [
+                273,
+                "#fe9f6d"
+            ],
+            [
+                307,
+                "#fecf92"
+            ],
+            [
+                342,
+                "#fcfdbf"
+            ]
+        ]
+    }
+}

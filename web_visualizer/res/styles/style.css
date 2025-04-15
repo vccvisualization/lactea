@@ -1,0 +1,283 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  overflow-x: hidden;
+  font-size: 100%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.link {
+  color: rgb(192, 165, 246);
+}
+
+#container {
+  min-width: 0;
+  flex: 1;
+}
+
+.absolute {
+  position: absolute;
+}
+
+#lactea-container {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#maingui {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#info-container {
+  width: 100%;
+  bottom: 1%;
+  left: 1%;
+}
+
+#figures {
+  margin: 0 auto;
+  top: 1%;
+  left: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #efefef;
+  border-radius: 1rem;
+  max-width: 800px;
+}
+#figures div {
+  text-align: center;
+}
+
+#figures.absolute {
+  width: 50%;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.colormap {
+  margin: 1rem 0;
+  display: block;
+  width: 95%;
+  position: relative;
+}
+.colormap svg {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.colormap canvas {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.spectrum {
+  width: 95%;
+}
+
+#help-container {
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+#help_button {
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(34, 34, 34);
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+}
+#help_button:hover {
+  background-color: rgb(192, 165, 246);
+}
+
+#help {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+#help p {
+  text-align: center;
+  padding: 0.3 rem;
+  margin: 1rem 0;
+}
+#help table,
+#help td,
+#help th {
+  border: 1px solid #efefef;
+  border-collapse: collapse;
+  padding: 0.3rem;
+  margin: 1rem auto;
+}
+#help th {
+  color: rgb(192, 165, 246);
+}
+#help th[colspan="2"] {
+  text-transform: uppercase;
+}
+
+.circle {
+  stroke: #efefef;
+}
+
+.circle-focus {
+  stroke: white;
+}
+
+.bar {
+  fill: #6997b3;
+}
+
+.bar-focus {
+  fill: rgb(192, 165, 246);
+}
+
+svg text {
+  fill: white;
+}
+
+.tooltip {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  border: 1px solid #efefef;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.signature {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.signatures {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: block;
+  background-color: transparent;
+  color: #efefef;
+}
+
+textarea.signatures {
+  max-width: 800px;
+  width: 90%;
+  height: 300px;
+}
+
+.current-progress {
+  fill: rgb(192, 165, 246);
+  stroke: rgb(192, 165, 246);
+}
+
+.total-progress {
+  fill: rgb(34, 34, 34);
+  stroke: #efefef;
+}
+
+.bb {
+  fill: pink;
+  fill: none;
+  stroke: pink;
+  stroke-width: 1;
+  stroke-miterlimit: 1;
+}
+
+.bb-approx {
+  fill: orange;
+  fill: none;
+  stroke: orange;
+  stroke-width: 1;
+  stroke-miterlimit: 1;
+}
+
+#info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info {
+  padding: 0.5rem;
+}
+.info p {
+  margin: 0;
+}
+.info .info-key {
+  margin-right: 1rem;
+  font-weight: bold;
+  color: #efefef;
+}
+
+#query {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.query {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.query h1 {
+  font-size: 120%;
+}
+.query div {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.query div p {
+  margin: 0.5rem;
+}
+.query div p:before, .query div p:after {
+  content: "•";
+  color: #b83b3b;
+  text-shadow: #b83b3b 0 0 5px;
+  margin: 0 10px;
+}
+
+.hide {
+  display: none !important;
+}
+
+#info-container.absolute {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 800px;
+  min-width: 500px;
+  font-size: 80%;
+}
+#info-container.absolute h1 {
+  font-size: 120%;
+  margin: 0;
+}
+#info-container.absolute div {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+
+#info.absolute {
+  justify-content: start;
+}/*# sourceMappingURL=style.css.map */
