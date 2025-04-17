@@ -8,10 +8,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
 ############ Dependencies
 
 find_package (Threads REQUIRED)
-find_package(glm CONFIG REQUIRED)
-find_package(glew CONFIG REQUIRED)
-find_package(glfw3 CONFIG REQUIRED)
-find_package(imgui CONFIG REQUIRED)
 #find_package(Boost)
 find_package(TBB CONFIG REQUIRED)
 
