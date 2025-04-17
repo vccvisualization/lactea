@@ -8,7 +8,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
 ############ Dependencies
 
 find_package (Threads REQUIRED)
-#find_package(Boost)
 find_package(TBB CONFIG REQUIRED)
 
 ############## Default target to build
@@ -62,9 +61,12 @@ add_library( lactea_xp_merged ${LACTEAXP_MERGE_SRC_FILES}
 		src/utils/portable_io.cpp
 		)
 target_link_libraries(lactea_xp_merged
-		TBB::tbb
 		Threads::Threads
 		)
+# Link TBB only on non-Windows systems
+if(NOT WIN32)
+	target_link_libraries(lactea_xp_merged TBB::tbb)
+endif()
 
 #### Star sorter XP MERGED
 add_executable( lactea_raw_star_db_sorter_xp_merged

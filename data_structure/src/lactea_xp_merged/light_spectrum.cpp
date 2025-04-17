@@ -43,9 +43,9 @@ const double* LightSpectrum::getHistogram() const { return _histogram; }
 
 bool LightSpectrum::addFlux(const double b[], const double azero)
 {
-    double a0 = std::max(azero, 0.);
+    double a0 = fmax(azero, 0.);
     for (int i = 0; i < LIGHTSPECTRUM_NUM_BINS_BASE; ++i) {
-        double f = std::max(b[i], 0.);
+        double f = fmax(b[i], 0.);
         this->_histogram[i] += f;
         this->_histogram[LIGHTSPECTRUM_TOTAL_ENERGY_INDEX] += f;
         double corrected = f * pow(10, 0.4 * a0 * EXTINCTION_CURVE[i] / 3.1);
@@ -57,16 +57,16 @@ bool LightSpectrum::addFlux(const double b[], const double azero)
 
 bool LightSpectrum::addPhotometry(double rp, double g, double bp)
 {
-    this->_histogram[LIGHTSPECTRUM_RP_INDEX] += std::max(rp, 0.);
-    this->_histogram[LIGHTSPECTRUM_G_INDEX] += std::max(g, 0.);
-    this->_histogram[LIGHTSPECTRUM_BP_INDEX] += std::max(bp, 0.);
+    this->_histogram[LIGHTSPECTRUM_RP_INDEX] += fmax(rp, 0.);
+    this->_histogram[LIGHTSPECTRUM_G_INDEX] += fmax(g, 0.);
+    this->_histogram[LIGHTSPECTRUM_BP_INDEX] += fmax(bp, 0.);
     return true;
 }
 
 
 bool LightSpectrum::addTemperature(double temperature)
 {
-    this->_histogram[LIGHTSPECTRUM_TEMPERATURE_INDEX] += std::max(temperature, 0.);
+    this->_histogram[LIGHTSPECTRUM_TEMPERATURE_INDEX] += fmax(temperature, 0.);
     this->_histogram[LIGHTSPECTRUM_TEMPERATURE_COUNT_INDEX] += temperature > 0;
     return true;
 }
@@ -76,7 +76,7 @@ LightSpectrum LightSpectrum::operator+(const LightSpectrum& b)
 {
     LightSpectrum ls;
     for (int i = 0; i < LIGHTSPECTRUM_NUM_BINS_TOTAL; ++i)
-        ls._histogram[i] = std::max(this->_histogram[i] + b._histogram[i], 0.);
+        ls._histogram[i] = fmax(this->_histogram[i] + b._histogram[i], 0.);
     return ls;
 }
 
@@ -84,14 +84,14 @@ LightSpectrum LightSpectrum::operator-(const LightSpectrum& b)
 {
     LightSpectrum ls;
     for (int i = 0; i < LIGHTSPECTRUM_NUM_BINS_TOTAL; ++i)
-        ls._histogram[i] = std::max(0., this->_histogram[i] - b._histogram[i]);
+        ls._histogram[i] = fmax(0., this->_histogram[i] - b._histogram[i]);
     return ls;
 }
 
 LightSpectrum & LightSpectrum::operator+=(const LightSpectrum &b)
 {
     for (int i = 0; i < LIGHTSPECTRUM_NUM_BINS_TOTAL; ++i)
-        this->_histogram[i] += std::max(b._histogram[i], 0.);
+        this->_histogram[i] += fmax(b._histogram[i], 0.);
     return *this;
 }
 
