@@ -34,6 +34,7 @@ endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 ############## Removing some warnings on Visual Studio
 
 if(MSVC)
+	add_compile_definitions(NOMINMAX)
 	add_definitions(/D_CRT_SECURE_NO_WARNINGS)
 	add_definitions(/D_SCL_SECURE_NO_WARNINGS)
 	# For generating folders in IDE by same directory structure
