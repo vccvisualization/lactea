@@ -70,14 +70,14 @@ export class LacteaVisualizer {
             });
     }
 
-    loadSettings(settings) {
+    loadSettings(settings, message) {
         this.settings.load(settings.general ?? {});
         this.cam.load(settings.camera ?? {});
         this.lacteaCache.load(settings.cache ?? {});
         this.renderPipeline.load(settings.renderPipeline ?? {});
         // this.signature.load(settings.signature ?? {});
         this.colormap.load(settings.colormap ?? {});
-        this.settings.reloadEverything();
+        this.settings.reloadEverything(message);
     }
 
     async load() {
@@ -88,6 +88,7 @@ export class LacteaVisualizer {
 
     async loadProfile(name) {
         console.log(`loading profile ${name}`);
+        document.getElementById("profile-title").innerHTML = `Loading Settings for ${name}`;
         await fetch(`res/profile/${name}`)
         .then(file => file.text())
         .then(text => JSON.parse(text))

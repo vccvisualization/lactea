@@ -29,7 +29,6 @@ endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 ############## Removing some warnings on Visual Studio
 
 if(MSVC)
-	add_compile_definitions(NOMINMAX)
 	add_definitions(/D_CRT_SECURE_NO_WARNINGS)
 	add_definitions(/D_SCL_SECURE_NO_WARNINGS)
 	# For generating folders in IDE by same directory structure
@@ -47,7 +46,6 @@ include_directories( "${PROJECT_SOURCE_DIR}/src" )
 
 ######## Files ############
 file(GLOB_RECURSE LACTEAXP_MERGE_SRC_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "src/lactea_xp_merged/*.cpp" "src/lactea_xp_merged/*.hpp" "src/lactea_xp_merged/*.c" "src/lactea_xp_merged/*.h")
-file(GLOB_RECURSE UTILS_SRC_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "src/utils/*.cpp" "src/utils/*.hpp" "src/utils/*.c" "src/utils/*.h" "src/utils/gl/*.cpp" "src/utils/gl/*.hpp" "src/utils/gl/*.c" "src/utils/gl/*.h" "src/utils/ImGuiFileDialog/ImGuiFileDialog.cpp")
 file(GLOB_RECURSE EXTERNAL_SORT_SRC_FILES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "src/external_sort/*.cpp" "src/external_sort/*.hpp")
 
 ##############################################################################
