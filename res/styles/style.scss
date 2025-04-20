@@ -137,7 +137,13 @@ body {
 #help {
     max-width: $max-width;
     margin: 1rem auto;
-
+    blockquote pre {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        margin: 1rem;
+        text-wrap: wrap;
+        border-radius: .5rem;
+    }
     p {
         text-align: center;
         padding: 0.3 rem;

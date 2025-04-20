@@ -70,14 +70,14 @@ export class LacteaVisualizer {
             });
     }
 
-    loadSettings(settings, message) {
+    loadSettings(settings) {
         this.settings.load(settings.general ?? {});
         this.cam.load(settings.camera ?? {});
         this.lacteaCache.load(settings.cache ?? {});
         this.renderPipeline.load(settings.renderPipeline ?? {});
         // this.signature.load(settings.signature ?? {});
         this.colormap.load(settings.colormap ?? {});
-        this.settings.reloadEverything(message);
+        this.settings.reloadEverything();
     }
 
     async load() {
