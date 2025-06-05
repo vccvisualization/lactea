@@ -76,15 +76,15 @@ The components of the visualizer are:
 To cite this work
 
 ```
-@article{alghamdi2025Lactea,
- title = {Lactea: Web-Based Spectrum-Preserving Multi-Resolution Visualization of the GAIA Star Catalog},
+@article{10.1111:cgf.70117,
+ journal = {Computer Graphics Forum},
+ title = {{Lactea: Web-Based Spectrum-Preserving Multi-Resolution Visualization of the GAIA Star Catalog}},
  author = {Alghamdi, Reem and Hadwiger, Markus and Reina, Guido and Jaspe-Villanueva, Alberto},
- journal = {Computer Graphics Forum (Proceedings of Eurographics Conference on Visualization 2025)},
  year = {2025},
- volume = {44},
- number = {3},
- pages = {to appear}
-} 
+ publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
+ ISSN = {1467-8659},
+ DOI = {10.1111/cgf.70117}
+}
 ```
 
 ## Acknowledgement 
